@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>resume.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><img src="pexels-ron-lach-7848989_400x225.png" alt="avatar"><br></p>
+<h1 id="misael-ramirez-ruiz">Misael Ramirez-Ruiz</h1>
+<p><strong>Pro Player for 100 Thieves</strong></p>
+<p>Currently a pro League of Legends player for the organization 100 Thieves which is based out of Los Angeles, California. Currently playing the ADC role but also interested in role-swapping to the support role if the opportunity arises.</p>
+<hr>
+<h2 id="experience">Experience</h2>
+<h3 id="100-thieves">100 Thieves</h3>
+<p><em><strong>ADC - League of Legends • Dec, 2022  — Present</strong></em>
+Since joining 100 Thieves back in December 2022, the team has achieve 2nd place in two splits out of the four splits that I have played with the team. Although we have yet to get first place in the LCS, that is still the goal that I strive to accomplish.</p>
+<ul>
+<li>Participated in the League of Legends Worlds 2022 Championship with 100 Thieves.</li>
+<li>Consistently a Top 5 ADC in the League of Legends LCS.</li>
+</ul>
+<h3 id="team-liquid">Team Liquid</h3>
+<p><em><strong>ADC - League of Legends • March, 2017 — Dec 2021</strong></em>
+During my tenure on Team Liquid we were able to win 3 back to back titles in the LCS. Made a deep run at the 2019 Mid-Seasonal Invitational where we finished 2nd place.</p>
+<ul>
+<li>Was the main shot-caller for the team and consistently pushed for my teammates to communicate in the game more.</li>
+</ul>
+<h3 id="teamsolomid">TeamSoloMid</h3>
+<p><em><strong>ADC - League of Legends • October, 2015 — March, 2017</strong></em>
+Was able to win one title in the LCS while on TeamSoloMid. Made significant progress on how to communicate while in game. This lead to me to take on shot-calling responsibilities during the later half of my employment.</p>
+<hr>
+<h2 id="education">Education</h2>
+<h3 id="university-of-california-berkeley">University of California, Berkeley</h3>
+<p><em><strong>Bachelor of Science, Information Technology • 2011 — 2015</strong></em></p>
+<ul>
+<li>Summa Cumme Laude graduate</li>
+</ul>
+<h3 id="mission-viejo-high-school">Mission Viejo High School</h3>
+<p><em><strong>High School Diploma • 2011</strong></em></p>
+<hr>
+<h2 id="projects">Projects</h2>
+<h3 id="twitchtv">Twitch.Tv</h3>
+<p><em><strong>Streamer • October, 2015 — Present</strong></em>
+Thanks to the nature of Twitch (streaming my game play), I was able to create a brand for myself that allowed me to reach a new audience and gain sponsorship opportunities. This allowed me to create another stream of income for myself while still allowing me to practice full time on stream.</p>
+<hr>
+<h2 id="skills">Skills</h2>
+<p><em><strong>Strong Leadership Skills</strong></em></p>
+<ul>
+<li>I have experience in leading groups and being able to communicate effectively in high-stress environments.</li>
+</ul>
+<p><em><strong>Computer Knowledge</strong></em></p>
+<ul>
+<li>Troubleshooting computer problems, both simple and complicated thanks to my Information Technology degree. Allows me to fix any problem that may occur to my computer while I am playing instead of having to call a technician or technical support.</li>
+</ul>
+<hr>
+<h2 id="recognition">Recognition</h2>
+<h3 id="outstanding-achievement">Outstanding Achievement</h3>
+<p><em><strong>Most Valuable Player• 2016, 2018. 2019</strong></em>
+Awarded the Most Valuable Player accolade on three separate occasions. Once on TeamSoloMid and two times on Team Liquid. Striving to achieve the same result while on 100 Thieves.</p>
+<hr>
+<h2 id="associations">Associations</h2>
+<h2 id="gamers-outreach">Gamers Outreach</h2>
+<p><em><strong>Charity Streams on Twitch • 2015 - Currently</strong></em>
+Gamers Outreach is a charity that empowers hospitalized families through play. Organized yearly fund drives and participated in fundraising events for the benefit of Gamers Outreach through Twitch Charity streams.</p>
+<hr>
+</body>
+</html>
