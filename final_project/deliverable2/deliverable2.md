@@ -10,7 +10,7 @@ course: CIS 106 Linux Fundamentals
 ![ServerSpecs](Question1.png)
 
 ## Ubuntu Login Screen
-![login](Question2.png)
+![LoginScreen](Question2.png)
 
 ## Questions
 3. **What is the IP address of your Ubuntu Server Virtual Machine?**
