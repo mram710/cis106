@@ -14,10 +14,10 @@ Reason 3: GNU+Linux is more stable compared to Windows OS so it is less prone to
 
 # Other operating systems
 * **Microsoft Windows** is a group of several proprietary graphical operating system families, all of which are developed and marketed by Microsoft. 
-![WindowsLogo](https://rb.gy/owlp13)
+<br> ![WindowsLogo](https://rb.gy/owlp13)
 * **macOS** is a series of proprietary graphical operating systems developed and marketed by Apple Inc.
-![MacOSLogo](https://rb.gy/2ub85j)
+<br>![MacOSLogo](https://rb.gy/2ub85j)
 * **FreeBSD** is a free and open-source Unix-like operating system descended from the Berkeley Software Distribution (BSD), which was based on Research Unix
-![FreeBSDLogo](https://rb.gy/f0dkxy)
+<br>![FreeBSDLogo](https://rb.gy/f0dkxy)
 * **RISC OS** is a computer operating system originally designed by Acorn Computers Ltd in Cambridge, England. 
-![RiscOSLogo](https://rb.gy/275m6p)
+<br>![RiscOSLogo](https://rb.gy/275m6p)
