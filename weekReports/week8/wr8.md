@@ -12,6 +12,8 @@ course: CIS 106 Linux Fundamentals
 
 ## What is nano?
 
+* Nano is a quick and efficient text editor. Allows you to explore the file system system using a terminal in Linux instead of using a graphical text editor.
+
 ### Start and Quit VIM
 
 * Starting VIM: Type the command: 'vim'
